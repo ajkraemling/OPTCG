@@ -1,5 +1,7 @@
+import Card from "@/app/components/Card";
+
 export default function Home() {
   return (
-      <div>asdasdasd</div>
+      <div><Card/></div>
   );
 }
