@@ -1,10 +1,12 @@
 import Image from 'next/image';
-import placeholder from '@/app/Card Art/Cards/Cards/OP01/OP01-001.png';
+import card from '@/app/assets/all_cards/Cards/Cards/OP01/OP01-001.png';
+
+
 export default function Card () {
     return (
-        <div className={"card"}>
+        <div>
             <Image
-                src={placeholder}
+                src={card}
                 alt="Alt"
                 fill
                 style={{ objectFit: 'fill' }}

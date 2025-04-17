@@ -30,4 +30,19 @@ body {
   height: 88vh !important;
   border-radius: 3vh;
   background-color: #0a3400;
+  margin: auto;
+}
+
+.game-area {
+  width: 60vw !important;
+  height: 35vw !important;
+  border-radius: 1vh;
+  background-color: #b65555;
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.play {
+
 }
