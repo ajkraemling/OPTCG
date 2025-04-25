@@ -8,9 +8,9 @@ export default function StageArea(props: { card: ICard[] }) {
             <div className="area-text">
                 STAGE
             </div>
-            {/*{props.card.length &&*/}
-            {/*    <Card card={props.card[0]}/>*/}
-            {/*}*/}
+            {props.card.length &&
+                <Card card={props.card[0]}/>
+            }
         </div>
     );
 }

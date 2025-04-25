@@ -9,7 +9,7 @@ export default function LeaderArea(props: { card: ICard[] }) {
                 LEADER
             </div>
             {props.card.length &&
-                <Card card={props.card[0]}/>
+                <Card card={props.card[0] }/>
             }
         </div>
     );

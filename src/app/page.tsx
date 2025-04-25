@@ -3,6 +3,7 @@ import {ICard} from "@/app/types/cards";
 import {useEffect, useState} from "react";
 import GameArea from "@/app/components/GameArea";
 import Card from "@/app/components/Card";
+import {CardSizeContext} from "@/app/CardSizeContext";
 
 export default function Home() {
     const [life, setLife] = useState<ICard[]>([]);
@@ -23,7 +24,7 @@ export default function Home() {
             .then(res => res.json())
             .then((data: ICard[]) => {
                 setLife(data.slice(1, 3)); // Pick 5 life cards, for example
-                setCharacters([data[1], data[1], data[1], data[1], data[1]]);
+                setCharacters([data[1], null, data[1], data[1], data[1]]);
                 setLeader([data[1]]);
                 setStage([emptyCardSlot]);
                 setDonDeck([emptyCardSlot]);
@@ -36,7 +37,9 @@ export default function Home() {
     return (
         <div>
             {/*<Card  card={leader[0]}/>*/}
-            <GameArea life={[life[0]]} characters={characters} leader={leader} deck={deck} stage={stage} costArea={costArea} donDeck={donDeck} trash={trash}  />
+            <CardSizeContext.Provider value={1}>
+                <GameArea life={[life[0]]} characters={characters} leader={leader} deck={deck} stage={stage} costArea={costArea} donDeck={donDeck} trash={trash}  />
+            </CardSizeContext.Provider>
         </div>
     );
 }
