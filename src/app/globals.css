@@ -33,6 +33,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.life-area, .don-deck, .character-area, .leader-area, .stage-area, .deck, .cost-area
+{
+  background-color: rgba(200, 200, 200, 0.3);
+  border-radius: 0.67vw;
+  /*border: 2px solid rgba(200, 200, 200, 1);*/
+}
+
 .area-text {
   position: absolute;
   font-size: 3vw;
@@ -58,8 +65,6 @@ body {
 
 .card {
   /*6.3cm x 8.8cm*/
-  width: 100% !important;
-  height: 100% !important;
   border-radius: 4.4%/ 3.15%;
 
   opacity: 60%;
@@ -75,7 +80,8 @@ body {
   background-position: center;
   display: flex;
   flex-direction: column;
-  gap: 2.5%;
+  justify-content: space-between;
+
   padding: 2.4%;
 }
 
@@ -102,19 +108,11 @@ body {
   border: 2px solid rgba(200, 200, 200, 1);
 }
 
-.leader-stage-deck {
+.leader-stage-deck, .don-cost-trash {
   display: flex;
   flex-direction: row;
   gap: 4%;
   justify-content: end;
-  /*height: 100%;*/
-}
-
-.life-area, .don-deck, .character-area, .leader-area, .stage-area, .deck, .cost-area
-{
-  background-color: rgba(200, 200, 200, 0.3);
-  border-radius: 8px;
-  border: 2px solid rgba(200, 200, 200, 1);
 }
 
 .life-area {
@@ -127,12 +125,10 @@ body {
 
 .character-area {
   display: flex;
-  justify-content: center;
-  gap: 2%;
-  align-items: center; /* ✅ Vertically centers .life-stack */
+  justify-content: space-between;
 }
 
-.leader-area, .stage-area, .deck {
+.leader-area, .stage-area, .deck, .don-deck, .cost-area, .trash-area {
   /*flex: 0 0 20%;*/
   /*flex-basis: 15%;*/
   position: relative;
@@ -141,10 +137,8 @@ body {
   justify-content: center;
 }
 
-.don-deck {
-  width: 6.8%;
-}
-
-.play {
-
+.cost-area {
+  flex: 1;
+  display: flex;
+  justify-content: start;
 }

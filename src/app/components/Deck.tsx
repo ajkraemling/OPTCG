@@ -10,7 +10,7 @@ export default function Deck(props: { card: ICard[] }) {
             </div>
             {
                 props.card.length &&
-                <Card card={props.card[0]}/>
+                <Card card={props.card[0]} back={true}/>
             }
         </div>
     );

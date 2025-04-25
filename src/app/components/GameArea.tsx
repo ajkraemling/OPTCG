@@ -31,11 +31,11 @@ export default function GameArea(props: {
                     </div>
                 </div>
             </div>
-            {/*<div style={{display: "flex", width: "100%", height: "31%",}}>*/}
-                {/*<DONDeck card={props.deck}/>*/}
-                {/*<CostArea card={props.costArea}/>*/}
-                {/*<TrashArea card={props.trash}/>*/}
-            {/*</div>*/}
+            <div className="don-cost-trash">
+                <DONDeck card={props.deck}/>
+                <CostArea card={props.costArea}/>
+                <TrashArea card={props.trash}/>
+            </div>
         </div>
     )
 }

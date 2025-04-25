@@ -8,9 +8,9 @@ export default function TrashArea(props: { card: ICard[] }) {
             <div className="area-text">
                 TRASH
             </div>
-            {/*{props.card.length &&*/}
-            {/*<Card card={props.card[0]}/>*/}
-            {/*}*/}
+            {props.card.length &&
+            <Card card={props.card[0]}/>
+            }
         </div>
     );
 }

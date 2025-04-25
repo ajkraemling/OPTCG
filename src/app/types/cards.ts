@@ -3,6 +3,12 @@ export interface Effect {
     timing?: "Activate: Main" | "Trigger" | "On Play" | "When Attacking" | "On KO";
 }
 
+export interface IDeck {
+    leaderID: string;
+    donID: string[10];
+    cardID: string[50];
+}
+
 export interface ICard {
     card_number: string; // This is the ID
     card_category?: "Leader" | "Character" | "Event" | "Stage" | "DON!!" | "";

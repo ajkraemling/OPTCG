@@ -14,31 +14,26 @@ export default function Home() {
     const [donDeck, setDonDeck] = useState<ICard[]>([]);
     const [costArea, setCostArea] = useState<ICard[]>([]);
     const [trash, setTrash] = useState<ICard[]>([]);
-
-    const emptyCardSlot : ICard = {
-            "card_number": "xxx",
-        };
     
     useEffect(() => {
         fetch('/cards.json')
             .then(res => res.json())
             .then((data: ICard[]) => {
-                setLife(data.slice(1, 3)); // Pick 5 life cards, for example
+                setLife(data.slice(0, 4)); // Pick 5 life cards, for example
                 setCharacters([data[1], null, data[1], data[1], data[1]]);
                 setLeader([data[1]]);
-                setStage([emptyCardSlot]);
-                setDonDeck([emptyCardSlot]);
-                setCostArea([emptyCardSlot]);
-                setTrash([emptyCardSlot]);
-                setDeck([emptyCardSlot]);
+                setStage([data[1]]);
+                setDonDeck([data[1]]);
+                setCostArea([data[1]]);
+                setTrash([data[1]]);
+                setDeck([data[1]]);
             });
     }, []);
 
     return (
         <div>
-            {/*<Card  card={leader[0]}/>*/}
             <CardSizeContext.Provider value={1}>
-                <GameArea life={[life[0]]} characters={characters} leader={leader} deck={deck} stage={stage} costArea={costArea} donDeck={donDeck} trash={trash}  />
+                <GameArea life={life} characters={characters} leader={leader} deck={deck} stage={stage} costArea={costArea} donDeck={donDeck} trash={trash}  />
             </CardSizeContext.Provider>
         </div>
     );
