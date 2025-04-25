@@ -19,6 +19,14 @@
   }
 }
 
+@font-face {
+  font-family: 'One Piece';
+  src: url('/fonts/one piece font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -27,7 +35,6 @@ body {
 
 .area-text {
   position: absolute;
-  font-family: "Bauhaus 93", sans-serif;
   font-size: 3vw;
   width: 100%;
   height: 100%;
@@ -37,7 +44,9 @@ body {
   text-align: center;
   line-height: 80%;
   z-index: 0;
-  opacity: 0.3; /* optional: subtle background effect */
+  font-family: 'One Piece', sans-serif;
+  font-weight: bold;
+  opacity: 0.4; /* optional: subtle background effect */
 }
 
 .card-wrapper {
