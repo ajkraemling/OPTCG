@@ -1,18 +1,24 @@
 import Image from 'next/image';
-import card from '@/app/assets/all_cards/Cards/Cards/OP01/OP01-001.png';
+import { ICard } from "@/app/types/cards";
 
+interface CardProps {
+    card?: ICard;
+}
 
-export default function Card () {
+export default function Card({ card }: CardProps) {
+    if (!card || card.card_number === undefined || card.card_number === "xxx") {
+        return <div className="card-wrapper" />;
+    }
+
     return (
-        <div>
+        <div className="card-wrapper">
             <Image
-                src={card}
-                alt="Alt"
+                src={card.illustration}
+                alt={card.illustration}
                 fill
                 style={{ objectFit: 'fill' }}
-
                 className="card"
             />
         </div>
-    )
+    );
 }

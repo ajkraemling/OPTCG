@@ -1,0 +1,65 @@
+[
+  {
+    "card_number": "OP01-001",
+    "card_category": "Character",
+    "card_name": "Monkey D. Luffy",
+    "illustration": "/all_cards/Cards/Cards/OP01/OP01-001.png",
+    "illustrators_name": "Eiichiro Oda",
+    "block": "01",
+    "color": ["red"],
+    "type": ["Straw Hat Crew"],
+    "rarity": "SR",
+    "attribute": ["Strike"],
+    "power": 6000,
+    "cost": 5,
+    "effects": [
+      {
+        "description": "This character can attack on the turn it is played.",
+        "timing": "On Play"
+      }
+    ],
+    "trigger": "Play this card for free.",
+    "counter": 1000
+  },
+  {
+    "card_number": "OP01-002",
+    "card_category": "Leader",
+    "card_name": "Roronoa Zoro",
+    "illustration": "/all_cards/Cards/Cards/OP01/OP01-001.png",
+    "illustrators_name": "Fan Artist",
+    "block": "01",
+    "color": ["red"],
+    "type": ["Straw Hat Crew"],
+    "rarity": "L",
+    "attribute": ["Slash"],
+    "power": 5000,
+    "cost": 0,
+    "effects": [
+      {
+        "description": "All your Characters gain +1000 power during your turn.",
+        "timing": "Activate: Main"
+      }
+    ],
+    "life": 5
+  },
+  {
+    "card_number": "OP01-003",
+    "card_category": "Event",
+    "card_name": "Gum-Gum Jet Pistol",
+    "illustration": "/all_cards/Cards/Cards/OP01/OP01-001.png",
+    "block": "01",
+    "color": ["red"],
+    "type": ["Straw Hat Crew"],
+    "rarity": "R",
+    "attribute": [],
+    "power": 0,
+    "cost": 4,
+    "effects": [
+      {
+        "description": "KO 1 of your opponent's Characters with 6000 power or less.",
+        "timing": "Activate: Main"
+      }
+    ],
+    "trigger": "KO 1 of your opponent's Characters with 6000 power or less."
+  }
+]
