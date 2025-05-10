@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import {ICard} from "@/app/types/cards";
-import {useCardSize} from "@/app/CardSizeContext";
+import {ICard} from "../types/cards";
+import {useCardSize} from "../CardSizeContext";
 
 export default function Card(props: { card?: ICard, size?: number, back? : boolean }) {
     const contextSize = useCardSize();

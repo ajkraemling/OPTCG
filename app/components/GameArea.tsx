@@ -1,12 +1,12 @@
-import {ICard} from "@/app/types/cards";
-import LifeArea from "@/app/components/LifeArea";
-import DONDeck from "@/app/components/DONDeck";
-import CharacterArea from "@/app/components/CharacterArea";
-import StageArea from "@/app/components/StageArea";
-import LeaderArea from "@/app/components/LeaderArea";
-import CostArea from "@/app/components/CostArea";
-import TrashArea from "@/app/components/TrashArea";
-import Deck from "@/app/components/Deck";
+import LifeArea from "./LifeArea";
+import DONDeck from "./DONDeck";
+import CharacterArea from "./CharacterArea";
+import StageArea from "./StageArea";
+import LeaderArea from "./LeaderArea";
+import CostArea from "./CostArea";
+import TrashArea from "./TrashArea";
+import Deck from "./Deck";
+import {ICard} from "../types/cards";
 
 export default function GameArea(props: {
     life: ICard[],

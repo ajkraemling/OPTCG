@@ -1,9 +1,8 @@
 "use client"
-import {ICard} from "@/app/types/cards";
 import {useEffect, useState} from "react";
-import GameArea from "@/app/components/GameArea";
-import Card from "@/app/components/Card";
-import {CardSizeContext} from "@/app/CardSizeContext";
+import { CardSizeContext } from "./CardSizeContext";
+import {ICard} from "./types/cards";
+import GameArea from "./components/GameArea";
 
 export default function Home() {
     const [life, setLife] = useState<ICard[]>([]);
@@ -32,6 +31,11 @@ export default function Home() {
 
     return (
         <div>
+            <a
+                href="/auth/login"
+                tabIndex={0}>
+                Log in
+            </a>
             <CardSizeContext.Provider value={1}>
                 <GameArea life={life} characters={characters} leader={leader} deck={deck} stage={stage} costArea={costArea} donDeck={donDeck} trash={trash}  />
             </CardSizeContext.Provider>

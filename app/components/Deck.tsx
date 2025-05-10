@@ -1,5 +1,5 @@
-import Card from "@/app/components/Card";
-import {ICard} from "@/app/types/cards";
+import {ICard} from "../types/cards";
+import Card from "./Card";
 
 export default function Deck(props: { card: ICard[] }) {
 
