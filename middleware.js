@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { auth0 } from "./lib/auth0"
+import { auth0 } from "./lib/services/auth0"
 
 export async function middleware(request) {
     const authRes = await auth0.middleware(request);

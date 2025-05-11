@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "../../node_modules/tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -67,7 +67,7 @@ body {
   /*6.3cm x 8.8cm*/
   border-radius: 4.4%/ 3.15%;
 
-  opacity: 60%;
+  /*opacity: 60%;*/
 }
 
 .game-areas {

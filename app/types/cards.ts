@@ -5,13 +5,16 @@ export interface Effect {
 
 export interface IDeck {
     leaderID: string;
-    donID: string[10];
-    cardID: string[50];
+    cardID: string[];
+}
+
+export interface IDonDeck {
+    cardID: string[];
 }
 
 export interface ICard {
     card_number: string; // This is the ID
-    card_category?: "Leader" | "Character" | "Event" | "Stage" | "DON!!" | "";
+    card_category?: "LEADER" | "CHARACTER" | "EVENT" | "STAGE" | "DON!!" | "";
     card_name?: string;
     illustration?: string;
     illustrators_name?: string;

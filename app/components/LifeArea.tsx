@@ -3,7 +3,7 @@ import Card from "./Card";
 
 export default function LifeArea(props: { life: ICard[] }) {
 
-    console.log(props.life)
+    // console.log(props.life)
 
     return (
         <div className="life-area">

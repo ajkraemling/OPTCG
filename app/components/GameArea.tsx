@@ -7,6 +7,8 @@ import CostArea from "./CostArea";
 import TrashArea from "./TrashArea";
 import Deck from "./Deck";
 import {ICard} from "../types/cards";
+import {useEffect, useState} from "react";
+import {fetchCardById} from "../../lib/services/cardService";
 
 export default function GameArea(props: {
     life: ICard[],
@@ -18,6 +20,15 @@ export default function GameArea(props: {
     costArea: ICard[],
     trash: ICard[]
 }) {
+    const [cards, setCards] = useState<any[]>([]);
+    const card_id : string = "ST02-002";
+    // useEffect(() => {
+    //     fetchCardById(card_id).then((data) => {
+    //         // setCards(data.results);
+    //         console.log(`Fetching Card: ${card_id}`, data)
+    //     });
+    // }, []);
+
     return (
         <div className="game-areas">
             <div className="life-character-leader-stage-deck">
