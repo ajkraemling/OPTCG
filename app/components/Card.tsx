@@ -8,7 +8,7 @@ export default function Card(props: { card?: ICard, size?: number, back? : boole
     const back: string = props.card?.card_category == "DON!!" ? "/all_cards/Card Backs/Don(Back).png" : props.card?.card_category == "LEADER" ? "/all_cards/Card Backs/Leader(Back).png" : "/all_cards/Card Backs/Card(Back).png";
 
     return (
-        <div className="card-wrapper"
+        <div className="relative aspect-[63/88]"
              style={{width: `${size * 11.24}vw`}}>
             {props.card?.illustration &&
                 <Image

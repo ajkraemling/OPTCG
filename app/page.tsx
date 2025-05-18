@@ -2,7 +2,7 @@
 import {useEffect, useState} from "react";
 import {CardSizeContext} from "@contexts/CardSizeContext";
 import {ICard, IDeck} from "./types/cards";
-import GameArea from "./components/GameArea";
+import GameArea from "@components/areas/GameArea";
 import {shuffle} from "@utils/shuffle";
 import {fetchCardById, fetchCardsByIdsOneByOne} from "@services/cardService";
 import mapToCard from "@lib/utils/mapping";

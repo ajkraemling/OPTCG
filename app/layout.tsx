@@ -25,6 +25,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+        <head>
+            <link
+                rel="preload"
+                href="/fonts/one-piece-font.ttf"
+                as="font"
+                type="font/ttf"
+                crossOrigin="anonymous"
+            />
+            <title>OPTCG Sim</title>
+        </head>
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >

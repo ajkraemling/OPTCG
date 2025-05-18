@@ -6,7 +6,7 @@ import LeaderArea from "./LeaderArea";
 import CostArea from "./CostArea";
 import TrashArea from "./TrashArea";
 import Deck from "./Deck";
-import {ICard} from "../types/cards";
+import {ICard} from "@custom-types/cards";
 
 export default function GameArea(props: {
     life: ICard[],

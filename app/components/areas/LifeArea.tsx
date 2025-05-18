@@ -1,5 +1,6 @@
-import {ICard} from "../types/cards";
-import Card from "./Card";
+import {ICard} from "@custom-types/cards";
+import Card from "../Card";
+import AreaText from "@components/AreaText";
 
 export default function LifeArea(props: { life: ICard[] }) {
 
@@ -7,9 +8,7 @@ export default function LifeArea(props: { life: ICard[] }) {
 
     return (
         <div className="db-color rounded-[0.67vw] relative w-[17.17%] flex justify-center items-center">
-            <div className="area-text">
-                LIFE
-            </div>
+            <AreaText text={"LIFE AREA"}/>
             <div
                 style={{
                     position: 'relative',
