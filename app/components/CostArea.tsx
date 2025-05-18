@@ -4,18 +4,14 @@ import Card from "./Card";
 export default function CostArea(props: { card: ICard[] }) {
 
     return (
-        <div className="cost-area">
+        <div className="db-color relative flex items-center justify-start flex-1">
             <div className="area-text">
                 COST<br/>
                 AREA
             </div>
             {(props.card.map((don, i) => (
                 <div key={i}>
-                    {don != null ?
-                        <Card card={don}/>
-                        :
-                        <Card card ={undefined}/>
-                    }
+                    <Card card={don}/>
                 </div>
             )))}
         </div>

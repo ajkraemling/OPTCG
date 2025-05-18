@@ -33,28 +33,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.life-area, .don-deck, .character-area, .leader-area, .stage-area, .deck, .cost-area
-{
-  background-color: rgba(200, 200, 200, 0.3);
-  border-radius: 0.67vw;
-  /*border: 2px solid rgba(200, 200, 200, 1);*/
-}
-
-.area-text {
-  position: absolute;
-  font-size: 3vw;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  line-height: 80%;
-  z-index: 0;
-  font-family: 'One Piece', sans-serif;
-  font-weight: bold;
-  opacity: 0.4; /* optional: subtle background effect */
-}
+/*.area-text {*/
+/*  position: absolute;*/
+/*  font-size: 3vw;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+/*  line-height: 80%;*/
+/*  z-index: 0;*/
+/*  font-family: 'One Piece', sans-serif;*/
+/*  font-weight: bold;*/
+/*  opacity: 0.4; !* optional: subtle background effect *!*/
+/*}*/
 
 .card-wrapper {
   /*6.3cm x 8.8cm*/
@@ -66,79 +59,11 @@ body {
 .card {
   /*6.3cm x 8.8cm*/
   border-radius: 4.4%/ 3.15%;
-
   /*opacity: 60%;*/
 }
 
-.game-areas {
-  /*60cm x 35cm*/
-  width: 100% !important;
-  aspect-ratio: 60/35;
-  background-image: url("/play_mats/playmat.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 2.4%;
-}
-
-.life-character-leader-stage-deck {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 65%;
-  gap: 2.5%;
-
-  /*background-color: rgba(131, 204, 115, 0.5);*/
-  /*border-radius: 8px;*/
-  /*border: 2px solid rgba(200, 200, 200, 1);*/
-}
-
-.character-leader-stage-deck {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-
+.db-color {
   background-color: rgba(182, 85, 85, 0.5);
   border-radius: 8px;
-  border: 2px solid rgba(200, 200, 200, 1);
-}
-
-.leader-stage-deck, .don-cost-trash {
-  display: flex;
-  flex-direction: row;
-  gap: 4%;
-  justify-content: end;
-}
-
-.life-area {
-  position: relative;
-  width: 17.17%;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* ✅ Vertically centers .life-stack */
-}
-
-.character-area {
-  display: flex;
-  justify-content: space-between;
-}
-
-.leader-area, .stage-area, .deck, .don-deck, .cost-area, .trash-area {
-  /*flex: 0 0 20%;*/
-  /*flex-basis: 15%;*/
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cost-area {
-  flex: 1;
-  display: flex;
-  justify-content: start;
+  border: 2px solid rgb(188, 27, 27);
 }

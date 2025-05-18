@@ -7,42 +7,32 @@ import CostArea from "./CostArea";
 import TrashArea from "./TrashArea";
 import Deck from "./Deck";
 import {ICard} from "../types/cards";
-import {useEffect, useState} from "react";
-import {fetchCardById} from "../../lib/services/cardService";
 
 export default function GameArea(props: {
     life: ICard[],
-    characters: [ICard | null, ICard | null, ICard | null, ICard | null, ICard | null]
-    leader: ICard[],
-    stage: ICard[],
+    characters: [ICard | undefined, ICard | undefined, ICard | undefined, ICard | undefined, ICard | undefined]
+    leader: ICard | undefined,
+    stage: ICard | undefined,
     deck: ICard[],
     donDeck: ICard[],
     costArea: ICard[],
     trash: ICard[]
 }) {
-    const [cards, setCards] = useState<any[]>([]);
-    const card_id : string = "ST02-002";
-    // useEffect(() => {
-    //     fetchCardById(card_id).then((data) => {
-    //         // setCards(data.results);
-    //         console.log(`Fetching Card: ${card_id}`, data)
-    //     });
-    // }, []);
 
     return (
-        <div className="game-areas">
-            <div className="life-character-leader-stage-deck">
+        <div className="db-color w-full aspect-[60/35] flex flex-col justify-between p-[2.4%]">
+            <div className="db-color flex w-full h-[65%] gap-[2.5%]">
                 <LifeArea life={props.life}/>
-                <div className="character-leader-stage-deck">
+                <div className="db-color flex flex-col justify-between flex-1">
                     <CharacterArea card={props.characters}/>
-                    <div className="leader-stage-deck">
+                    <div className="db-color flex gap-[4%] justify-end">
                         <LeaderArea card={props.leader}/>
                         <StageArea card={props.stage}/>
                         <Deck card={props.deck}/>
                     </div>
                 </div>
             </div>
-            <div className="don-cost-trash">
+            <div className="db-color flex gap-[4%] justify-end">
                 <DONDeck card={props.deck}/>
                 <CostArea card={props.costArea}/>
                 <TrashArea card={props.trash}/>

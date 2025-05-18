@@ -6,7 +6,7 @@ export default function LifeArea(props: { life: ICard[] }) {
     // console.log(props.life)
 
     return (
-        <div className="life-area">
+        <div className="db-color rounded-[0.67vw] relative w-[17.17%] flex justify-center items-center">
             <div className="area-text">
                 LIFE
             </div>
